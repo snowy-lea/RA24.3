@@ -7,7 +7,7 @@ describe('API Routes', () => {
         expect(res.status).toBe(200);
     });
 
-    it('should return JSON response for /api route', async () => {
+    it('should return JSON response for / route', async () => {
         const res = await request(app).get('/');
         expect(res.body).toEqual({ message: 'Hello World!' })
     });
