@@ -1,0 +1,14 @@
+const request = require('supertest');
+const app = require('./app');
+
+describe('API Routes', () => {
+    it('should return 200 OK for / route', async () => {
+        const res = await request(app).get('/');
+        expect(res.status).toBe(200);
+    });
+
+    it('should return JSON response for /api route', async () => {
+        const res = await request(app).get('/');
+        expect(res.body).toEqual({ message: 'Hello World!' })
+    });
+});
